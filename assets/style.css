@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --text-color: #DBE4EF;
     --card-front-color: #144480;
     --card-back-color: #00F4BF;
+    --fonte-principal: 'Poppins';
+}
+
+* {
+    font-family: var(--fonte-principal);
 }
 
 body {
@@ -25,12 +32,18 @@ body {
 }
 
 .cartao__conteudo {
+    border-radius: 10px;
     background-color: var(--card-front-color);
     text-align: center;
     /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
+}
+
+.cartao__conteudo:hover {
+    background-color: #0050b1;
+    transition: .4s;
 }
 
 .cartao__conteudo h3 {
@@ -46,7 +59,6 @@ body {
 }
 
 .cartao__conteudo p {
-    margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
     font-size: 1.4vw;
@@ -55,6 +67,11 @@ body {
 .cartao__conteudo__pergunta p {
     color: var(--text-color);
     font-weight: 500;
+}
+
+.cartao__conteudo__pergunta p:hover {
+    font-size: 1.6vw;
+    transition: 1s;
 }
 
 .cartao__conteudo__resposta p {
